@@ -1,0 +1,395 @@
+body, html {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+  }
+  
+  /* Barra de navegación */
+  
+  .back {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 23.35rem;
+    display: flex;
+  }
+ 
+  a {
+    position: relative;
+    color:#1B061B;
+    font-style: normal;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent element */
+    font-size: inherit;
+  }
+  
+  .nv {
+    position: relative;
+    background-color: #fff;
+    margin: 2rem;
+    border-radius: 6.25rem;
+    width: 93.75%;
+    height: 3.6rem;
+    border: solid 0.5px #1B061B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    position: relative;
+    margin: 0.25% 1% 0.25% 3%;
+  }
+  
+  nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .main-menu, .auth-menu {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 1rem 0 0;
+    font-weight: bold;
+  }
+  
+  .main-menu li, .auth-menu li {
+    margin: 0 1rem;
+    position: relative;
+  }
+  
+  .auth-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .auth-menu li button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #1B061B;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .auth-menu li button:hover {
+    background-color: #fff;
+    color: #1B061B;
+    transition: 0.4s ease-in-out;
+    position: relative;
+  }
+  
+  li:hover {
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    color: #502f50;
+    position: relative;
+  }
+  
+  #locacion {
+    position: relative;
+    text-decoration-line: underline;
+    font-weight: bold;
+  }
+
+/* Opciones */
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.div1, .div2, .div3, .div4 {
+  margin: 0 1.85rem; 
+  padding: 1%;
+  width: 13rem;
+  height: 20rem;
+  background-color: #D0D0D0;
+  position: relative;
+}
+
+.arrow-button {
+  position: relative;
+  background-color: #1B061B; 
+  color: white; 
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.3rem;
+  height: 2.75rem;
+  font-weight: bold;
+  border-radius: 25px; 
+  cursor: pointer; 
+}
+
+/* Cuadros de texto */
+
+.TextoDeOpciones1 {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+.c {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0 0 6rem;
+  margin: 0 0 0 10%;
+  width: 50rem;
+  height: 30rem;
+  background-color: #D0D0D0;
+  border-top-left-radius: 20rem; 
+  border-bottom-left-radius: 20rem;
+  justify-content: flex-start;
+}
+
+.imgLapton {
+  position: relative;
+  width: 35rem;
+  height: 27.1rem;
+}
+
+.TextoDeOpciones2 {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.c2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1% 0 0;
+  width: 50rem;
+  padding: 6rem 4rem 0rem 2rem;
+  height: 30rem;
+  background-color: #D0D0D0;
+  border-top-right-radius: 20rem; 
+  border-bottom-right-radius: 20rem;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* Cuadros finales */
+
+.cuadrosContinert {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  width: 30rem;
+  height: 37.5rem;
+  background-color: #D0D0D0;
+  margin: 5%;
+  border-radius: 5%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.imgGP {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+}
+
+.bMP {
+  background-color: #1B061B; 
+  color: white; 
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13.3rem;
+  height: 2.75rem;
+  font-weight: bold;
+  border-radius: 25px; 
+  cursor: pointer; 
+  position: relative;
+}
+
+.imgAP {
+  width: 20rem;
+  height: 11.5rem;
+  position: relative;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 7.5rem;
+  background-color: #1B061B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.RedesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B061B;
+  position: relative;
+}
+
+.R {
+  width: 3.75rem;
+  height: 3.75rem;
+  background-color: #1B061B;
+  margin: 1rem 10rem;
+  border-radius: 0.7rem;
+  position: relative;
+}
+
+.R a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.R a .layer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+}
+
+.R a:hover .layer {
+  transform: rotate(-30deg) skew(20deg);
+}
+
+.R a .layer span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 0.7rem;
+  transition: all 0.4s;
+}
+
+.R a:hover .layer span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.R a:hover .layer span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.R a:hover .layer span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+.R a:hover .layer span:nth-child(4) {
+  opacity: 0.8;
+  transform: translate(15px, -15px);
+}
+
+.R a .icon {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.R a .icon i {
+  font-size: 1.875;
+  position: relative;
+}
+
+.iconsInt {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1B061B;
+  border-radius: 25%;
+  position: relative;
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .div1, .div2, .div3, .div4 {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  .c, .c2 {
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+    border-radius: 10rem;
+  }
+
+  .imgLapton, .imgAP {
+    width: 80%;
+    height: auto;
+  }
+
+  .cuadro {
+    width: 90%;
+    height: auto;
+    margin: 2rem 0;
+  }
+
+  .imgGP {
+    width: 80%;
+    height: auto;
+  }
+}

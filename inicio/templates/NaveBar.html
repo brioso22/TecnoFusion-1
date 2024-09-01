@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="nv">
+        <nav>
+            <!-- Aquí se ubicará el logo -->
+            <img src="{% static 'img/logo.jpeg' %}" height="50px" width="50px" class="logo">
+            <ul class="main-menu">
+                <li><a href="{% url 'inicio' %}" id="{% if request.path == '/' %}locacion{% endif %}">Home</a></li>
+                <li><a href="{% url 'tienda' %}" id="{% if request.path == '/tienda/' %}locacion{% endif %}">Tienda</a></li>
+                <li><a href="{% url 'donaciones' %}" id="{% if request.path == '/donaciones/' %}locacion{% endif %}">Donaciones</a></li>
+                <li><a href="{% url 'soporteT' %}" id="{% if request.path == '/soporteT/' %}locacion{% endif %}">Soporte Técnico</a></li>
+                <li><a href="{% url 'preguntasF' %}" id="{% if request.path == '/preguntasF/' %}locacion{% endif %}">Preguntas Frecuentes</a></li>
+            </ul>
+            {% if request.user.is_authenticated %}
+            <ul class="auth-menu">
+                <li><a href="{% url 'account_logout' %}" id="butlog"><button>LOGOUT</button></a></li>
+            </ul>
+            {% else %}
+            <ul class="auth-menu">
+                <li><a href="{% url 'account_login' %}" id="butlog"><button>authentication</button></a></li>
+            </ul>
+            {% endif %}
+        </nav>
+    </div>
+</body>
+</html>

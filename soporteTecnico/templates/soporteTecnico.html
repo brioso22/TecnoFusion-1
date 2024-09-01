@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/soporte.css' %}">
+    <style>
+        #fondo {
+            background-image: url("{% static 'img/im.jpg' %}");
+            background-size: cover; 
+            width: 100%;
+            height: 1200px;
+            margin: 0;
+            position: relative;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        {% include "NaveBar.html" %}
+    </div>
+
+    <div id="contactanos">
+        <div id="con">CONTACTANOS</div>
+        <img src="{% static 'img/pru.jpeg' %}" alt="Contact Image" id="call">
+    </div>
+
+    <div id="extremo"></div>
+    
+    <div id="fondo">
+        <div class="text3">Tecnofusion 360</div>
+        <br>
+        <form action="">
+            <div id="form">
+                <h2 id="tex1">Enviar formulario de contacto para empresas</h2>
+                <br>
+                <div class="label">Nombre</div>
+                <input type="text" class="in">
+
+                <div class="label">Compañía/Organización:</div>
+                <input type="text" class="in">
+
+                <div class="label">Email:</div>
+                <input type="text" class="in">
+
+                <div class="label">Teléfono:</div>
+                <input type="text" class="in">
+
+                <div class="label">Mensaje:</div>
+                <input type="text" class="in" id="mensaje">
+
+                <br>
+                <br>
+                <input type="checkbox" id="ace">
+                Aceptar los términos y condiciones de la empresa
+                <br>
+                <button id="button">Enviar</button>
+            </div>
+        </form>
+    </div>
+    
+    <br>
+    <br>
+    <div id="extremo2">
+        <div class="curve"></div>
+        <div class="line"></div>
+        <h1>
+            Comprometidos con nuestros 
+            <br>
+            clientes   
+        </h1>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="RedesContainer">
+            <div class="R">
+                <a href="#">
+                    <div class="layer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="icon">
+                            <!-- Aquí se ubicará el ícono de Facebook -->
+                            <i><img src="{% static 'img/f.png' %}" class="iconsInt" alt="Facebook" /></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="R">
+                <a href="#">
+                    <div class="layer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="icon">
+                            <!-- Aquí se ubicará el ícono de Instagram -->
+                            <i><img src="{% static 'img/insta.png' %}" class="iconsInt" alt="Instagram" /></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="R">
+                <a href="#">
+                    <div class="layer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="icon">
+                            <!-- Aquí se ubicará el ícono de Twitter -->
+                            <img src="{% static 'img/x.png' %}" class="iconsInt" alt="Twitter" />
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Fin del footer -->
+</body>
+</html>
