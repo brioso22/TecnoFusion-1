@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/tienda.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/barra.css' %}">
 
     <title>Ventas</title>
 </head>
@@ -17,7 +18,7 @@
         <div class="filter">
             <form method="get" action="#">
                 <label for="filter">Categoría:</label>
-                <select id="filter" name="categoria" onchange="this.form.submit()">
+                <select id="filter" name="categoria" onchange="this.form.submit()" class="filter2">
                     <option value="all">Todas</option>
                     {% for categoria in categorias %}
                         <option value="#" {% if request.GET.categoria == categoria.nombre %}selected{% endif %}>{{ categoria.nombre }}</option>
@@ -29,8 +30,8 @@
         <!-- Barra de búsqueda -->
         <div class="search-bar">
             <form method="get" action="#">
-                <input type="text" placeholder="Buscar productos..." name="query" value="{{ request.GET.query }}">
-                <button type="submit">Buscar</button>
+                <input type="text" placeholder="Buscar productos..." name="query" value="{{ request.GET.query }}" class="search">
+                <button type="submit" id="search">Buscar</button>
             </form>
         </div>
 
@@ -49,43 +50,89 @@
         </div>
     </div>
 
-    <h1>Productos Disponibles</h1>
-    <ul>
-        {% for producto in productos %}
-            <li>
-                <h2>{{ producto.nombre }}</h2>
-                <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
-                <p>Precio: ${{ producto.precio }}</p>
-                <p>Categoría: {{ producto.get_categoria_display }}</p>
-                <p>Descripción: {{ producto.descripcion }}</p>
-                
-                <!-- Formularios para las acciones con botones -->
-            <form method="post" action="{% url 'add_to_cart' producto.id %}">
-                {% csrf_token %}
-                <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
-                    <i class="fas fa-shopping-cart"></i> Agregar al carrito
-                </button>
-            </form>
+    <ul class="ul"> 
+        <li class="selecionado">Motherboard</li>
+        <li>RAM</li>
+        <li>Almacenamiento</li>
+        <li>Teclados</li>
+        <li>Mouses</li>
+        <li>Monitores</li>
+        <li>Sillas</li>
+        <li>Escritorios</li>
+    </ul>
+<br>
+<img src="{% static 'img/pro.png' %}" width="100%">
+</img>
 
-            <form method="post" action="{% url 'add_comment' producto.id %}">
-                {% csrf_token %}
-                <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
-                    <i class="fas fa-comment"></i> Comentar
-                </button>
-            </form>
+<h1 id="ten">Tendencias</h1>
+<div id="continer-ten">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+<br>
+<br>
 
-            <form method="post" action="{% url 'rate_product' producto.id %}">
-                {% csrf_token %}
-                <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
-                    <i class="fas fa-star"></i> Calificar
-                </button>
-            </form>
-            </li>
-        {% endfor %}
-    </ul> 
-    
-    
 
-    <script src="{% static 'js/tienda.js' %}"></script>
+<!-- include de tienda para la primer sprint -->
+{% include 'lsProducto.html' %}
+<script src="{% static 'js/tienda.js' %}"></script>
+<!-- fin de include de tienda -->
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="RedesContainer">
+        <div class="R">
+            <a href="#">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="icon">
+                        <!-- Aquí se ubicará el ícono de Facebook -->
+                        <i><img src="{% static 'img/f.png' %}" class="iconsInt" alt="Facebook" /></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="R">
+            <a href="#">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="icon">
+                        <!-- Aquí se ubicará el ícono de Instagram -->
+                        <i><img src="{% static 'img/insta.png' %}" class="iconsInt" alt="Instagram" /></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="R">
+            <a href="#">
+                <div class="layer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="icon">
+                        <!-- Aquí se ubicará el ícono de Twitter -->
+                        <img src="{% static 'img/x.png' %}" class="iconsInt" alt="Twitter" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</footer>
+<!-- Fin del footer -->
+ 
 </body>
 </html>

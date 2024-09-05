@@ -1,0 +1,40 @@
+<!--sustitucion a un include -->
+<ul><div class="productos">
+    {% for producto in productos %}
+    
+
+        <li class="producto">
+            <h2>{{ producto.nombre }}</h2>
+            <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="imagpro">
+            <p>Precio: ${{ producto.precio }}</p>
+            <p>Categoría: {{ producto.get_categoria_display }}</p>
+            <p>Descripción: {{ producto.descripcion }}</p>
+            
+            
+            <!-- Formularios para las acciones con botones -->
+        <form method="post" action="{% url 'add_to_cart' producto.id %}">
+            {% csrf_token %}
+            <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
+                <i class="fas fa-shopping-cart"></i> Agregar al carrito
+            </button>
+        </form>
+
+        <form method="post" action="{% url 'add_comment' producto.id %}">
+            {% csrf_token %}
+            <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
+                <i class="fas fa-comment"></i> Comentar
+            </button>
+        </form>
+
+        <form method="post" action="{% url 'rate_product' producto.id %}">
+            {% csrf_token %}
+            <button type="submit" {% if not user.is_authenticated %}disabled{% endif %}>
+                <i class="fas fa-star"></i> Calificar
+            </button>
+        </form>
+        </li>
+    
+    {% endfor %}
+</div>
+</ul> 
+<!--fin de sustitucion-->
